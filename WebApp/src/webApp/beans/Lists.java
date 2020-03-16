@@ -45,7 +45,6 @@ public class Lists {
 		return listType;
 	}
 
-	// Set List's Type
 	public void setListType(String listType) {
 		this.listType = listType;
 	}
