@@ -62,7 +62,7 @@ public class CookieFilter implements Filter {
 			catch(SQLException exp) {
 				exp.printStackTrace();
 			}
-			// Map checked Cookie
+			// Mark checked Cookie
 			session.setAttribute("COOKIE_CHECKED", "CHECKED");
 		}
 		

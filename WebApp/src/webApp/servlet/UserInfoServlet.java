@@ -27,14 +27,21 @@ public class UserInfoServlet extends HttpServlet {
             throws ServletException, IOException {
         HttpSession session = request.getSession();
  
+        // Check if user login in system
         UserData loginedUser = MyUtils.getLoginedUser(session);
  
+        // not yet login 
         if (loginedUser == null) {
+        	// Redirect to page login
             response.sendRedirect(request.getContextPath() + "/login");
             return;
         }
+        
+        // Save inf in request attribute before redirect
         request.setAttribute("user", loginedUser);
  
+        // if user already login in system, redirect to page
+        // /WEB-INF/views/userInfoView.jsp
         RequestDispatcher dispatcher //
                 = this.getServletContext().getRequestDispatcher("/WEB-INF/views/userInfoView.jsp");
         dispatcher.forward(request, response);

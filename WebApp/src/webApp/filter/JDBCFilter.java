@@ -34,7 +34,7 @@ public class JDBCFilter implements Filter {
  
     }
  
-	// Check if Servlet is the target of the current request? 
+	// Check if Servlet is the target of the current request 
     private boolean needJDBC(HttpServletRequest request) {
         System.out.println("JDBC Filter");
         // 
